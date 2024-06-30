@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission-Related Q&A Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Admission-Related Q&A Chatbot</h1>
+        <div class="chat-container">
+            <div class="chat-history" id="chat-history">
+                {% if response %}
+                    <div class="chat-message">
+                        <div class="bot-message">{{ response }}</div>
+                    </div>
+                {% endif %}
+            </div>
+            <form method="post" class="chat-input" onsubmit="return sendMessage();">
+                <input type="text" id="user_query" name="user_query" placeholder="Ask me about college admission" required autofocus>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript to scroll chat to the bottom -->
+    <script>
+        function sendMessage() {
+            var userQuery = document.getElementById('user_query').value;
+            var chatHistory = document.getElementById('chat-history');
+            
+            // Add user message to chat history
+            var userMessageDiv = document.createElement('div');
+            userMessageDiv.classList.add('chat-message');
+            userMessageDiv.innerHTML = '<div class="user-message">' + userQuery + '</div>';
+            chatHistory.appendChild(userMessageDiv);
+
+            // Scroll chat history to bottom
+            chatHistory.scrollTop = chatHistory.scrollHeight;
+
+            return true; // To submit the form
+        }
+    </script>
+</body>
+</html>

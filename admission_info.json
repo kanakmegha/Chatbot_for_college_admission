@@ -1,0 +1,74 @@
+{
+    "admission_info": [
+        {
+            "university": "Example University",
+            "programs": [
+                {
+                    "program_name": "Computer Science",
+                    "degree_level": "Undergraduate",
+                    "requirements": [
+                        {
+                            "documents":[
+                                "High school diploma or equivalent",
+                                "SAT/ACT scores",
+                                "Letters of recommendation",
+                                "Personal statement"
+
+                            ]
+                        }
+                        
+                    ],
+                    "deadlines": {
+                        "early_decision": "November 1",
+                        "regular_decision": "January 15"
+                    }
+                },
+                {
+                    "program_name": "Business Administration",
+                    "degree_level": "Graduate",
+                    "requirements": [
+                        {
+                            "documents":[
+                                "Bachelor's degree",
+                                "GRE/GMAT scores"
+
+                            ]
+                        },
+            
+                        "Work experience (recommended)",
+                        "Statement of purpose"
+                    ],
+                    "deadlines": {
+                        "fall_term": "April 1",
+                        "spring_term": "October 1"
+                    }
+                }
+            ]
+        },
+        {
+            "university": "Another University",
+            "programs": [
+                {
+                    "program_name": "Psychology",
+                    "degree_level": "Undergraduate",
+                    "requirements": [
+
+                        {
+                            "documents":[
+                                "High school diploma or equivalent",
+                                "SAT/ACT scores",
+                                "Personal essay"
+                            ]
+                        },
+                        
+                        "Interview (optional)"
+                    ],
+                    "deadlines": {
+                        "early_action": "November 15",
+                        "regular_decision": "February 1"
+                    }
+                }
+            ]
+        }
+    ]
+}
